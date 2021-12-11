@@ -1,0 +1,613 @@
+/*
+filter: blur(2px);
+-webkit-filter: blur(2px);*/
+
+/* Full body control */
+body {
+    margin: 0px;
+    height: 100vh;
+    background-image: url("http://localhost/cubeventure_laravel/public/images/background3.jpg");
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+/* Smooth scroll */
+.smoothscroll {
+    width: 100%;
+    height: 100%;
+    /* CSS Smooth Scroll */
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    /*scroll-snap-type: y mandatory;*/
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+section {
+    overflow: hidden;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    /* Scroll Snap
+    scroll-snap-align: center;*/
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+/* leaderboard CSS */
+.leaders {
+    float: left;
+    color: azure;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+.leaders h1 {
+    margin: 50px;
+}
+
+.leaders h5 strong {
+    color: #D18700;
+}
+
+.leaders table {
+    /*margin-left: calc(100% / 4);
+    margin-right: calc(100% / 4);*/
+    width: 50%;
+    margin-right: 25%;
+    margin-left: 25%;
+    margin-top: 50px;
+    border: white 3px solid;
+    table-layout: fixed;
+}
+
+th {
+    width: calc(100% / 5);
+    background-color: black;
+}
+
+td {
+    color: azure;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #D18700;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ffa82d;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+/* How to play CSS */
+
+.howtoplay {
+    float: left;
+    color: azure;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+.howtoplay div {
+    margin-bottom: 50px;
+}
+
+.howtoplay h1 {
+    margin: 50px;
+}
+
+.howtoplay h2 {
+    float: left;
+    color: #D18700;
+}
+
+.howtoplay h3 {
+    color: #D18700;
+}
+
+.howtoplay p {
+    margin-left: 10px;
+}
+
+.how_content_odd {
+    text-align: justify;
+    float: left;
+}
+
+.how_content_odd strong{
+    color: #D18700;
+}
+
+.how_content_odd img{
+    margin-top: 30px;
+    float: right;
+    margin-left: 10px;
+    width: 200px;
+    border-radius: 20px;
+    border: #D18700 2px solid;
+}
+
+.how_content_even {
+    text-align: justify;
+    float: left;
+}
+
+.how_content_even strong{
+    color: #D18700;
+}
+
+.how_content_even img{
+    float: left;
+    margin-right: 10px;
+    width: 200px;
+    border-radius: 20px;
+    border: #D18700 2px solid;
+}
+
+.how_left {
+    float: left;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+/* Game div */
+.home {
+    float: left;
+    color: azure;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+.home h1 {
+    margin: 50px;
+}
+
+.home h5 strong {
+    color: #D18700;
+}
+
+.home h5 strong a {
+    text-decoration: none;
+    text-underline: none;
+}
+
+.home h5 strong a:hover {
+    color: #D18700;
+}
+
+.presentation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 0;
+
+}
+
+.card {
+    position: relative;
+
+    width: 700px;
+    height: 400px;
+    overflow: hidden;
+
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/*Light blue cover above the slide show*/
+.card::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 900;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+}
+
+.card_part {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 7;
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    transform: translateX( 700px );
+    /*background-image: url( https://github.com/Flat-Pixels/assets_hosting/blob/master/picture_slides/1.jpg?raw=true );*/
+    background-image: url("http://localhost/cubeventure_laravel/public/images/Screenshot1.png");
+
+
+    animation: opaqTransition 28s cubic-bezier(0, 0, 0, 0.97) infinite;
+}
+
+
+.card_part.card_part-two {
+    z-index: 6;
+    /*background-image: url( https://github.com/Flat-Pixels/assets_hosting/blob/master/picture_slides/2.jpg?raw=true );*/
+    background-image: url("http://localhost/cubeventure_laravel/public/images/Screenshot2.png");
+    animation-delay: 7s;
+}
+
+.card_part.card_part-three {
+    z-index: 5;
+    /*background-image: url( https://github.com/Flat-Pixels/assets_hosting/blob/master/picture_slides/3.jpg?raw=true );*/
+    background-image: url("http://localhost/cubeventure_laravel/public/images/Screenshot3.png");
+    animation-delay: 14s;
+}
+
+.card_part.card_part-four {
+    z-index: 4;
+    /*background-image: url( https://github.com/Flat-Pixels/assets_hosting/blob/master/picture_slides/4.jpg?raw=true );*/
+    background-image: url("http://localhost/cubeventure_laravel/public/images/Screenshot4.png");
+    animation-delay: 21s;
+}
+
+
+@keyframes opaqTransition {
+    3% { transform: translateX( 0 ); }
+    25% { transform: translateX( 0 ); }
+    28% { transform: translateX( -700px ); }
+    100% { transform: translateX( -700px ); }
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+/* Contact CSS */
+
+.contact {
+    float: left;
+    color: azure;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+.contact img {
+    width: 80px;
+}
+
+.contact h1{
+    margin: 50px;
+}
+
+.con_social {
+    display: inline-block;
+    color: azure;
+    width: 100%;
+}
+
+.con_social img {
+    width: 20px;
+}
+
+.con_social a {
+
+    text-decoration: none;
+    color: azure;
+}
+
+.con_social a:hover {
+    text-decoration: none;
+}
+
+.con_fb:hover{
+    color: #60b8ff;
+}
+.con_ig:hover {
+    color: #e0488e;
+}
+.con_tw:hover {
+     color: #60b8ff;
+}
+
+.con_cv {
+    margin: 20px;
+}
+
+.con_cv a {
+    display: block;
+    color: azure;
+    margin: 20px;
+}
+
+.con_cv a:hover {
+    text-decoration: none;
+    color: #cbd5e0;
+    background-color: #D18700;
+    border-radius: 10px;
+}
+
+.con_mid{
+    border-right: #1a202c 1px solid;
+    border-left: #1a202c 1px solid;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+/* About us CSS */
+
+.about_content {
+    width: 80%;
+    margin: auto;
+    text-align: left;
+    padding-bottom: 50px;
+    border-bottom: #020b15 10px;
+    position: relative;
+}
+
+
+
+.about {
+    width: 100%;
+    height: auto;
+    color: azure;
+}
+
+.about p {
+    text-align: justify;
+}
+
+.about h1{
+    margin: 50px;
+    color: azure;
+}
+
+.about h3{
+    float: left;
+    margin-bottom: 5px;
+}
+
+.about img{
+    padding-right: 10px;
+    float: left;
+    width: 120px;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+/* Navigation bar */
+/* Top bar */
+
+.topnav {
+    top: 0;
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    /*width: 99.1vw;*/
+    overflow: hidden;
+    background: rgb(81,84,98);
+    background: radial-gradient(circle, rgba(81,84,98,1) 0%, rgba(0,0,0,1) 100%);
+}
+
+.topnav img {
+    width: calc((100vw/12)*2);
+    height: auto;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 19px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+    text-decoration: none;
+}
+
+.topnav a.active {
+    background-color: #020b15;
+    color: white;
+}
+
+nav {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 100%;
+    left: 0;
+    width: calc((100vw/12)*2);
+    height: auto;
+    align-items: center;
+    justify-content: center;/*
+    background: rgb(81,84,98);
+    background: radial-gradient(circle, rgba(81,84,98,1) 0%, rgba(0,0,0,1) 100%);*/
+}
+
+nav a {
+    color: #f2f2f2;
+    display: inline-block;
+    text-decoration: none;
+    padding: 19px 16px;
+    font-size: 17px;
+    width: 100%;
+    text-align: center;
+}
+
+nav img {
+    width: 100%;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+    text-decoration: none;
+}
+
+nav a.active {
+    background-color: #020b15;
+    color: white;
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+/* Footer */
+
+.footer {
+    text-align: center;
+    width: 100%;
+    background: rgb(81,84,98);
+    background: radial-gradient(circle, rgba(81,84,98,1) 0%, rgba(0,0,0,1) 100%);
+    color: #f2f2f2;
+    padding: 10px 0;
+    border-top: #fbaf40 2px solid;
+}
+
+.footer img{
+    width: 50px;
+    display: block;
+    margin: 0 auto;
+}
+
+.footer_socials img{
+    margin-top: 5px;
+    width: 24px;
+    display:inline-block;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+/* Page layout */
+
+.leftside, .rightside, .middle {
+    height: 100%;
+    width: 100%;
+
+}
+
+.leftside {
+    /*background-color: darkgrey;*/
+}
+.rightside {
+
+}
+.middle {
+    background-color: rgb(2,11,21,0.8);
+/*
+    filter: opacity(80%);*/
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+/* Main logo style */
+
+.logo{
+    width: 100%;
+    height: auto;
+    /*background: #333333*/
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+/* Class row */
+
+.navbar {
+    background: rgb(81,84,98);
+    background: radial-gradient(circle, rgba(81,84,98,1) 0%, rgba(0,0,0,1) 100%);
+}
+
+.nav_border {
+    z-index: 99;
+    background-size: contain;
+    width: 100%;
+    height: 2px;
+    background-image: url("http://localhost/cubeventure_laravel/public/images/navbar_border.png");
+}
+
+
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+/* Animations and Back to top button */
+#myBtn {
+    display: none;
+    position: fixed;
+
+    width: 70px;
+    top: 100vh;
+    left: 88%;
+
+    z-index: 99;
+
+    cursor: pointer;
+
+    -webkit-animation: btn_show 1s ease forwards;
+
+            animation: btn_show 1s ease forwards;
+}
+
+#side_nav {
+    display: block;
+    top: calc(100vh / 3.33);
+    left: calc(-17vw);
+    /*animation: sidebar 0.5s ease forwards;*/
+}
+
+@-webkit-keyframes sidebar_show {
+    0% { left: -326px }
+    /*100% {transform: translateX(326px)}*/
+    100% { left: 0px }
+}
+
+@keyframes sidebar_show {
+    0% { left: -326px }
+    /*100% {transform: translateX(326px)}*/
+    100% { left: 0px }
+}
+
+@-webkit-keyframes sidebar_hide {
+    0% { left: 0px }
+    100% { left: -326px }
+}
+
+@keyframes sidebar_hide {
+    0% { left: 0px }
+    100% { left: -326px }
+}
+
+@-webkit-keyframes btn_show {
+    0% {}
+    50% { transform: translateY(-160px) }
+    100% { transform: translateY(-110px) }
+}
+
+@keyframes btn_show {
+    0% {}
+    50% { transform: translateY(-160px) }
+    100% { transform: translateY(-110px) }
+}
